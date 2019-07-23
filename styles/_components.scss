@@ -1,0 +1,109 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: $white;
+  color: $body-text-color;
+  font-size: 16px;
+}
+
+.parallax {
+  min-height: 20em;
+  background: transparent;
+
+  @include media-query(ipad) {
+    min-height: 35em;
+  }
+
+  @include media-query(desk) {
+    min-height: 40em;
+  }
+
+  @include media-query(xl) {
+    min-height: 45em;
+  }
+}
+
+header {
+  color: $white;
+  padding: 3em;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+
+  &.header__intro {
+    text-align: right;
+
+    h2 {
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+}
+
+.sidebar {
+  max-height: 20em;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: $sidebar-text-color;
+    display: block;
+    transition: 0.3s;
+
+    &:hover {
+      color: $hover-color;
+      font-style: italic;
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include media-query(ipad) {
+    max-height: 15em;
+  }
+
+  @include media-query(desk) {
+    max-height: 20em;
+  }
+
+  @include media-query(xl) {
+    max-height: 30em;
+  }
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: $white;
+  color: $black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+#toggle {
+  transition: margin-left .5s;
+  padding: 16px;
+}
